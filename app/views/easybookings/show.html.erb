@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @easybooking.phone_number %>
+</p>
+
+<p>
+  <strong>Date of booking:</strong>
+  <%= @easybooking.date_of_booking %>
+</p>
+
+<%= link_to 'Edit', edit_easybooking_path(@easybooking) %> |
+<%= link_to 'Back', easybookings_path %>

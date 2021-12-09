@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<table class = "table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Phone number</th>
+      <th>Date of booking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @easybookings.each do |easybooking| %>
+      <tr>
+        <td><%= easybooking.phone_number %></td>
+        <td><%= easybooking.date_of_booking %></td>
+        <td><%= link_to 'Show', easybooking, class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Edit', edit_easybooking_path(easybooking), class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', easybooking, class:"btn btn-dark", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Book', new_easybooking_path, class:"btn btn-success" %>

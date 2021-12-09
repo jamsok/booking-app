@@ -1,0 +1,2 @@
+class Easybooking < ApplicationRecord
+end
